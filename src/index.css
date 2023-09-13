@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg__gradient{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+    background-image: linear-gradient(270deg,
+        hsl(295, 100%, 63%) 0%,
+        hsl(273, 100%, 62%) 26%,
+        hsl(283, 77%, 42%) 39%,
+        hsl(281, 100%, 69%) 50%,
+        hsl(288, 60%, 55%) 61%,
+        hsl(298, 100%, 62%) 74%,
+        hsl(286, 71%, 46%) 100%);
+    filter: blur(140px);
+}
+.btn-1{
+  background: linear-gradient(99.99deg, #B936F5 -21.45%, #C64C85 100%, #F1005B 100%);
+}
+.btn-1:hover{
+  background: whitesmoke;
+  box-shadow: 5px 5px 1px rgba(255, 255, 255, 0.5)
+}
+
+.bg2{
+  background: linear-gradient(180deg, #AA14F0 -42.59%, rgba(0, 0, 0, 0) -42.59%, #AA14F0 -42.58%, rgba(170, 20, 240, 0.18) 4.35%, rgba(151, 60, 68, 0.055) 99.99%, rgba(185, 54, 245, 0) 100%);
+}
+
+@layer base {
+  body {
+    @apply font-secondary bg-body text-white relative leading-relaxed font-extralight;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-primary;
+  }
+  a {
+    @apply text-[15px] font-medium;
+  }
+  .nav-link {
+    @apply after:w-6 after:h-1 after:absolute after:left-0 after:-bottom-2 after:rounded-full after:bg-transparent after:hover:bg-[#b936f5] after:transition-all after:duration-300 relative;
+  }
+  .btn {
+    @apply font-medium h-12 px-8 bg-gradient-to-r from-[#b936f5] to-[#f1006c] rounded text-[15px] hover:bg-gradient-to-l hover:from-[#b936f5] hover:to-[#f1006c] outline-none flex items-center justify-center cursor-pointer;
+  }
+}
